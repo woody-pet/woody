@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.woody.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.woody.entity.User">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="userName" jdbcType="VARCHAR" property="userName" />
+        <result column="passWord" jdbcType="VARCHAR" property="passWord" />
+        <result column="realName" jdbcType="VARCHAR" property="realName" />
+    </resultMap>
+
+    <select id="getUserById" resultType="com.woody.entity.User">
+        select * from user where id = #{id}
+    </select>
+
+    <insert id="addUser" parameterType="com.woody.entity.User" useGeneratedKeys="true" keyProperty="id">
+        insert into user(userName, passWord, realName) values(#{userName},#{passWord},#{realName})
+    </insert>
+
+    <update id="updateUser" parameterType="com.woody.entity.User" >
+        update user set realName = #{realName} where id = #{id}
+    </update>
+
+</mapper>
