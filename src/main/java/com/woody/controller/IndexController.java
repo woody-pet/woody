@@ -17,6 +17,7 @@ public class IndexController {
     @RequestMapping("")
     public String index(HttpServletRequest request) throws Exception {
 
+        log.debug("hello debug!");
         //hello
 
 //        Enumeration<String> names = request.getHeaderNames();

@@ -34,4 +34,6 @@ logging:
       max-file-size: 10MB
   file:
     path: "./logs"
-  level: INFO
+  level:
+    root: info
+    com.woody: debug
