@@ -26,7 +26,7 @@ public class IndexController {
 //            log.info(hname+":"+h);
 //        }
 //        return "redirect:/index.html";
-        String ip = IPUtil.getRealIp(request);
+//        String ip = IPUtil.getRealIp(request);
 //        request.setAttribute("IP", "IP:"+ip);
 //        log.info(ip);
 //        log.info(IPUtil.getMACAddress(IPUtil.getRealIp(request)));
