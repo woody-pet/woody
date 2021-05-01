@@ -28,10 +28,10 @@ mybatis:
   #type-aliases-package: com.example.entity
 
 logging:
-  root: INFO
   logback:
     rollingpolicy:
       max-history: 30
       max-file-size: 10MB
   file:
     path: "./logs"
+  level: INFO
