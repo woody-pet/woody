@@ -1,4 +1,4 @@
-package com.woody;
+package com.gemini;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
