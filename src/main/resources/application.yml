@@ -37,3 +37,6 @@ logging:
   level:
     root: info
     com.woody: debug
+
+thymeleaf:
+  cache: false
