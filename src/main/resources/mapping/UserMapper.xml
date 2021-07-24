@@ -21,4 +21,8 @@
         update user set realName = #{realName} where id = #{id}
     </update>
 
+    <select id="removeUserById" >
+        delete from user where id = #{id}
+    </select>
+
 </mapper>

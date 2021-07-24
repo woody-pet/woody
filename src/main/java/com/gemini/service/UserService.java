@@ -2,26 +2,14 @@ package com.gemini.service;
 
 
 import com.gemini.entity.User;
-import com.gemini.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-@Service
-public class UserService {
-    @Autowired
-    UserMapper userMapper;
+public interface UserService {
+    User getUserById(Long id);
 
+    Long addUser(User user);
 
-    @Transactional
-    public User getUserById(int id){
+    Integer updateUser(User user);
 
-//        User user = new User(null,"wangwu","123","王五");
-//        userMapper.addUser(user);
-//
-//        user.setRealName("王五修改后");
-//        userMapper.updateUser(user);
+    Integer removeUserById(Long id);
 
-        return userMapper.getUserById(id);
-    }
 }

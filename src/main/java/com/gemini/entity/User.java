@@ -1,20 +1,10 @@
 package com.gemini.entity;
 
 public class User {
-    private Integer id;
+    private Long id;
     private String userName;
     private String passWord;
     private String realName;
-
-    public User() {
-    }
-
-    public User(Integer id, String userName, String passWord, String realName) {
-        this.id = id;
-        this.userName = userName;
-        this.passWord = passWord;
-        this.realName = realName;
-    }
 
     @Override
     public String toString() {
@@ -26,11 +16,21 @@ public class User {
                 '}';
     }
 
-    public Integer getId() {
+    public User() {
+    }
+
+    public User(Long id, String userName, String passWord, String realName) {
+        this.id = id;
+        this.userName = userName;
+        this.passWord = passWord;
+        this.realName = realName;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

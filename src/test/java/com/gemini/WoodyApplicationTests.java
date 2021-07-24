@@ -28,7 +28,7 @@ class WoodyApplicationTests {
 
     @Test
     void mapper() throws Exception {
-        System.out.println(userMapper.getUserById(1));
+        System.out.println(userMapper.getUserById(1L));
     }
 
 }
