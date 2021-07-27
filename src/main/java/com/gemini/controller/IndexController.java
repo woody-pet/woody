@@ -1,22 +1,20 @@
 package com.gemini.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
+@Slf4j
 @Controller
 @RequestMapping("/")
 public class IndexController {
 
-    Logger log = LoggerFactory.getLogger(getClass());
-
     @RequestMapping("")
     public String index(HttpServletRequest request) throws Exception {
 
-        log.debug("hello debug!");
+        log.debug("hello index!");
         //hello
 
 //        Enumeration<String> names = request.getHeaderNames();
