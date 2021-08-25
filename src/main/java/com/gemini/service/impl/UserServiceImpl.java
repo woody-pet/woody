@@ -1,34 +1,79 @@
 package com.gemini.service.impl;
 
-
 import com.gemini.entity.User;
-import com.gemini.mapper.UserMapper;
+import com.gemini.dao.UserDao;
 import com.gemini.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+import javax.annotation.Resource;
+import java.util.List;
+
+/**
+ * (User)表服务实现类
+ *
+ * @author wuchao
+ * @since 2021-08-25 17:19:40
+ */
+@Service("userService")
 public class UserServiceImpl implements UserService {
-    @Autowired
-    UserMapper userMapper;
+    @Resource
+    private UserDao userDao;
 
+    /**
+     * 通过ID查询单条数据
+     *
+     * @param id 主键
+     * @return 实例对象
+     */
     @Override
-    public User getUserById(Long id) {
-        return userMapper.getUserById(id);
+    public User queryById(Long id) {
+        return this.userDao.queryById(id);
     }
 
+    /**
+     * 查询多条数据
+     *
+     * @param offset 查询起始位置
+     * @param limit  查询条数
+     * @return 对象列表
+     */
     @Override
-    public Long addUser(User user) {
-        return userMapper.addUser(user);
+    public List<User> queryAllByLimit(int offset, int limit) {
+        return this.userDao.queryAllByLimit(offset, limit);
     }
 
+    /**
+     * 新增数据
+     *
+     * @param user 实例对象
+     * @return 实例对象
+     */
     @Override
-    public Integer updateUser(User user) {
-        return userMapper.updateUser(user);
+    public User insert(User user) {
+        this.userDao.insert(user);
+        return user;
     }
 
+    /**
+     * 修改数据
+     *
+     * @param user 实例对象
+     * @return 实例对象
+     */
     @Override
-    public Integer removeUserById(Long id) {
-        return userMapper.removeUserById(id);
+    public User update(User user) {
+        this.userDao.update(user);
+        return this.queryById(user.getId());
+    }
+
+    /**
+     * 通过主键删除数据
+     *
+     * @param id 主键
+     * @return 是否成功
+     */
+    @Override
+    public boolean deleteById(Long id) {
+        return this.userDao.deleteById(id) > 0;
     }
 }

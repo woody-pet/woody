@@ -3,13 +3,13 @@ server:
 spring:
   datasource:
     username: root
-    password: Hi.1234567
-    url: jdbc:mysql://192.168.1.100:3306/woody
+    password: 123456
+    url: jdbc:mysql://192.168.1.100:3307/woody
     driver-class-name: com.mysql.cj.jdbc.Driver
     schema-username: root
-    schema-password: Hi.1234567
+    schema-password: 123456
     data-username: root
-    data-password: Hi.1234567
+    data-password: 123456
     platform: mysql
     schema:
       - classpath:sql/schema-all.sql
