@@ -9,6 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class TomcatConfig {
 
+    /**
+     * url访问特殊符号"\<>[]{}|</>处理
+     * @return
+     */
     @Bean
     public TomcatServletWebServerFactory webServerFactory() {
         TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
