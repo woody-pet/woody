@@ -1,6 +1,6 @@
 package com.gemini;
 
-import com.gemini.dao.UserDao;
+import com.gemini.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,7 +16,7 @@ class WoodyApplicationTests {
     DataSource dataSource;
 
     @Autowired
-    UserDao userDao;
+    UserService userService;
 
     @Test
     void contextLoads() throws Exception {
@@ -28,7 +28,7 @@ class WoodyApplicationTests {
 
     @Test
     void mapper() throws Exception {
-        System.out.println(userDao.queryById(1L));
+        System.out.println(userService.queryById(2L));
     }
 
 }
