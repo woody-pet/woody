@@ -19,4 +19,4 @@ logging:
     path: "./logs"
   level:
     root: info
-    com.woody: debug
+    com.gemini: debug
