@@ -9,7 +9,7 @@
 * docker mysql 192.168.1.100 3307 root 123456
 * jenkins http://192.168.1.100:8080/ wuchao wuchao
 * webapp http://192.168.1.100:8081/
-* github https://github.com/woody-pet/woody/ woody-pet Hi.1234567
+* github https://github.com/woody-pet/woody/ woody-pet Hi1234567
 * gitlab http://192.168.1.100:8090/ wuchao 87654321
 
 启动jenkins:
